@@ -1,20 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Home</class>
- <widget class="QWidget" name="Home" >
-  <property name="geometry" >
+ <widget class="QWidget" name="Home">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>786</width>
+    <height>535</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>Home</string>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
   </property>
+  <property name="windowTitle">
+   <string>Management du papier peint</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="title">
+      <property name="font">
+       <font>
+        <family>Comic Sans MS</family>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Fond d'écran actuel:</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="actual_background">
+     <property name="maximumSize">
+      <size>
+       <width>768</width>
+       <height>432</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>SizeVerCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>Images/3840x2160_Wallpaper_africa,_hills,_trees,_clouds.jpeg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Autres fond d'écran disponibles: </string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_all_other_background">
+       <property name="text">
+        <string>Encore plus de fonds</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>button_all_other_background</sender>
+   <signal>clicked()</signal>
+   <receiver>Home</receiver>
+   <slot>openOtherBackgroundWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>627</x>
+     <y>638</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>764</x>
+     <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openOtherBackgroundWindow()</slot>
+ </slots>
 </ui>

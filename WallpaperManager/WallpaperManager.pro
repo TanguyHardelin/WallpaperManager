@@ -6,6 +6,8 @@
 
 QT       += core gui
 
+CONFIG += c++11
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = WallpaperManager
@@ -13,8 +15,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        home.cpp
+        home.cpp \
+    button_other_background.cpp \
+    xml.cpp \
+    all_other_background.cpp \
+    imagedownloader.cpp
 
-HEADERS  += home.h
+HEADERS  += home.h \
+    button_other_background.h \
+    xml.h \
+    all_other_background.h \
+    imagedownloader.h
 
-FORMS    += home.ui
+FORMS    += home.ui \
+    all_other_background.ui

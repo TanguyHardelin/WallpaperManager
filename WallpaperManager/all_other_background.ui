@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>All_Other_Background</class>
- <widget name="All_Other_Background" class="QWidget">
+ <widget class="QWidget" name="All_Other_Background">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,9 +11,28 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Autres fond d'écrans disponibles</string>
   </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="other_background_scroll_area">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="other_background_scroll_area_widget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>380</width>
+        <height>280</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>
