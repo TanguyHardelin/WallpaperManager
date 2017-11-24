@@ -67,6 +67,9 @@ void Home::changeBackground(QString background_name){
     _current_background=background_name;
     _param_file->editTag("current_background",_current_background);
     system(("feh --bg-scale Images/"+_current_background).toStdString().c_str());
+
+    QFileInfo fichier_image("Images/"+_current_background);
+    system(("gsettings set org.gnome.desktop.background picture-uri file:"+fichier_image.absoluteFilePath()).toStdString().c_str());
     _param_file->writeXML();
     ui->actual_background->setPixmap(QPixmap("Images/"+_current_background));
 

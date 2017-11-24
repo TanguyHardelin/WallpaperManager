@@ -17,8 +17,9 @@ using namespace std;
 void displayHelp(){
     cout<<"AIDE"<<endl;
 }
-void downloadImages(QStringList all_argv){
+QString downloadImages(QStringList all_argv){
     ImageDownloader ddl_image("https://wallpaperscraft.com/all/3840x2160");
+    return ddl_image.getLastBackground();
 }
 
 int main(int argc, char *argv[])
@@ -33,7 +34,13 @@ int main(int argc, char *argv[])
     }
     //On execute les actions en fonctions de ce que on veut:
     if(all_argv.contains("--download_images") || all_argv.contains("-D")){
-        downloadImages(all_argv);
+        QString last_background=downloadImages(all_argv);
+        //On set l'image:
+        if(last_background=="")
+            last_background="3840x2160_Wallpaper_night_city,_skyscrapers,_night,_bridge.jpeg";
+        qDebug()<<"Background changed: "+last_background;
+        w.changeBackground(last_background);
+
     }
     else if(all_argv.contains("--help")){
         displayHelp();
@@ -41,10 +48,11 @@ int main(int argc, char *argv[])
     else{
         //On montre la fenetre:
         w.show();
+        return application.exec();
     }
 
 
-    return application.exec();
+
 }
 
 

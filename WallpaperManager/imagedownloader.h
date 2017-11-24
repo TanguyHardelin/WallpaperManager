@@ -12,6 +12,8 @@ public:
     QStringList getListOfPictureExisting();
     void getAllBackground();
 
+    inline QString getLastBackground(){return last_background;}
+
 signals:
 
 public slots:
@@ -19,6 +21,7 @@ public slots:
 
 protected:
     QString _current_site;
+    QString last_background;
 };
 
 #endif // IMAGEDOWNLOADER_H

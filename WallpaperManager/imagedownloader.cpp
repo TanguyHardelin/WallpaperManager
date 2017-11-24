@@ -45,7 +45,7 @@ void ImageDownloader::getAllBackground(){
 
 
     //On fait la recherche sur 10 pages
-    for(int i=0;i<10;i++){
+    for(int i=0;i<2;i++){
         stringstream tmp;
         tmp << i;
         system(("wget -O tmp_"+QString(tmp.str().c_str())+".html "+_current_site+"/page2"+QString(tmp.str().c_str())).toStdString().c_str());
@@ -85,6 +85,7 @@ void ImageDownloader::getAllBackground(){
                     filename=tmp_text.split("alt=\"")[1].split("\"")[0];
                 filename=filename.replace(" ","_")+".jpeg";
                 qDebug()<<"Name: "+filename+" url: "+url.replace("//","https://");
+                last_background=filename;
                 if(url.contains("http")){
                     if(!list_of_all_pictures_ddl.contains(filename)){
                         //On n'a pas encore téléchargé l'image:
@@ -94,6 +95,7 @@ void ImageDownloader::getAllBackground(){
                         all_pictures_ddl_stream<<filename+"\n";
                         all_pictures_ddl_stream.flush();
                     }
+
 
                 }
 
