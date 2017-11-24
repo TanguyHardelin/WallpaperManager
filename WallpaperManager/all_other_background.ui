@@ -13,9 +13,16 @@
   <property name="windowTitle">
    <string>Autres fond d'écrans disponibles</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2f343f;</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <widget class="QScrollArea" name="other_background_scroll_area">
+     <property name="styleSheet">
+      <string notr="true">
+</string>
+     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>

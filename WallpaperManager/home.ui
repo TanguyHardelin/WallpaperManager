@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>Management du papier peint</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2f343f; color:white</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QSplitter" name="splitter">
@@ -51,6 +54,9 @@
      <property name="cursor">
       <cursorShape>SizeVerCursor</cursorShape>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -65,7 +71,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Autres fond d'écran disponibles: </string>
+      <string>Autres fonds d'écran disponibles: </string>
      </property>
     </widget>
    </item>
